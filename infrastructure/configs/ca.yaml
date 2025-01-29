@@ -23,4 +23,4 @@ metadata:
 spec:
   ca:
     secretName: ca-secret
-    secretNamespace: cert-manager
+    # secretNamespace: cert-manager
