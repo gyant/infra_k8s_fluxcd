@@ -6,3 +6,4 @@ resources:
   - nfs.yaml
   - nvidia-device-plugin.yaml
   - metallb.yaml
+  - kyverno.yaml
