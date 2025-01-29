@@ -11,7 +11,7 @@ metadata:
   namespace: kyverno
 spec:
   interval: 24h
-  url: https://kyverno.github.io/kyverno/
+  url: https://kyverno.github.io/
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
