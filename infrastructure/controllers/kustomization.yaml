@@ -5,3 +5,4 @@ resources:
   - local-path.yaml
   - nfs.yaml
   - nvidia-device-plugin.yaml
+  - metallb.yaml

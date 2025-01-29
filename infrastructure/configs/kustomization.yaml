@@ -4,3 +4,4 @@ resources:
   - cluster-issuers.yaml
   - ca.yaml
   - registry.yaml
+  - metallb-config.yaml
