@@ -7,3 +7,4 @@ resources:
   - nvidia-device-plugin.yaml
   - metallb.yaml
   - kyverno.yaml
+  - prometheus-operator.yaml
