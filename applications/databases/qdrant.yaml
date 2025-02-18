@@ -36,5 +36,6 @@ spec:
       storageVolumeName: qdrant-storage
     image:
       useUnprivilegedImage: true
-    containerSecurityContext:
-      runAsNonRoot: false
+    updateVolumeFsOwnership: false
+    #containerSecurityContext:
+    #  runAsNonRoot: false
