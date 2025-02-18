@@ -34,3 +34,5 @@ spec:
       size: 10G
       storageClassName: nfs-slow
       storageVolumeName: qdrant-storage
+    image:
+      useUnprivilegedImage: true
