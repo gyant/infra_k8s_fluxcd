@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: qdrant
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: qdrant
+  namespace: qdrant
+spec:
+  interval: 24h
+  url: https://qdrant.to/helm
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: qdrant
+  namespace: qdrant
+spec:
+  interval: 30m
+  chart:
+    spec:
+      chart: qdrant
+      version: "1.x"
+      sourceRef:
+        kind: HelmRepository
+        name: qdrant
+        namespace: qdrant
+      interval: 12h
+  values:
+    persistence:
+      accessModes: ["ReadWriteOnce"]
+      size: 10G
+      storageClassName: nfs-slow
+      storageVolumeName: qdrant-storage
