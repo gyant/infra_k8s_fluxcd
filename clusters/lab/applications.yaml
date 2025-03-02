@@ -17,7 +17,7 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: application-auth
+  name: application-keycloak
   namespace: flux-system
 spec:
   targetNamespace: keycloak
@@ -27,6 +27,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./applications/auth
+  path: ./applications/keycloak
   prune: true
   wait: true
