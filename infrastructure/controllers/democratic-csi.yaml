@@ -86,4 +86,5 @@ spec:
         # https://github.com/democratic-csi/democratic-csi/tree/master/examples
         # YOU MUST COPY THE DATA HERE INLINE!
         driver: zfs-generic-iscsi
-        #...
+          datasetParentName: secondary/zvols  # Ensure this is set if overriding StorageClass
+          ppoolName: secondary
